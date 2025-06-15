@@ -27,7 +27,7 @@ body {
 .album {
   width: 100%;
   display: flex;
-  gap: 24px;
+  gap: 36px;
   color: #fff;
   backdrop-filter: brightness(25%);
   text-decoration: none;
@@ -36,7 +36,8 @@ body {
 .cover {
   width: 128px;
   height: 128px;
-  transform: perspective(64px) rotate3d(0, 1, 0, 0deg) scale(1.1);
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 .albumInfo {
   display: flex;
@@ -60,4 +61,29 @@ body {
   border-radius: 100px;
   background-color: #080808;
   filter: drop-shadow(0 0 2px #000);
+}
+#complete {
+  border-right: solid 2px #4fb44f;
+  background: linear-gradient(to right, #00000000, #00000000, #00000000, #4fb44f40);
+}
+#incomplete {
+  border-right: solid 2px #b4944f;
+  background: linear-gradient(to right, #00000000, #00000000, #00000000, #b4944f40);
+}
+#notstarted {
+  border-right: solid 2px #b44f4f;
+  background: linear-gradient(to right, #00000000, #00000000, #00000000, #b44f4f40);
+}
+.legend {
+  background-color: #080808;
+  padding: 12px;
+  width: 100%;
+  margin: 0 0 24px 0;
+  display: flex;
+  gap: 12px;
+}
+.legendSquare {
+  width: 36px;
+  height: 36px;
+  border: solid 4px #000;
 }
